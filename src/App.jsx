@@ -1,5 +1,5 @@
 import { useState } from 'react'  
-
+import React from 'react'
 import styles from './page.module.css'
 import useWebSocket from 'react-use-websocket'
 
@@ -45,9 +45,10 @@ export default function Home() {
   const requestRoomCreation = () => {
    
 
-    const data = {
-      name: 'test room'
+    const data = {createRoom:{name: 'userinput'}
+  
     }
+    WebSocket.send(data)
     //Send message to websocket server to create room.
 
   }

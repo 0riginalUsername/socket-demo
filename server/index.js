@@ -8,7 +8,7 @@ const app = express()
 const server = http.createServer(app)
 const wss = new WebSocket.Server({ server: server, path: '/api/ws' })
 
-const port = process.env.SERVER_PORT || 4000
+const port =  4000
 
 app.use(cors())
 
